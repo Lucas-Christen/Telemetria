@@ -1,0 +1,359 @@
+<!-- dashboard/page2.html -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>TELEMETRIA CAR #01 - Comparação de Voltas</title> <!-- Título da página atualizado -->
+  
+  <!-- Link para o arquivo CSS externo para estilização -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Cabeçalho principal da página -->
+  <h1>TELEMETRIA CAR #01 - Comparação de Voltas</h1> <!-- Título da página atualizado -->
+
+  <!-- Navegação entre páginas -->
+  <nav>
+    <a href="index.html" class="nav-button">Voltar para Página Principal</a>
+  </nav>
+
+  <!-- Contêiner para seleção de voltas e variáveis para comparação -->
+  <div class="comparison-container">
+    <h2>Comparação de Voltas</h2>
+    
+    <!-- Seleção das Voltas -->
+    <div class="selection">
+      <label for="lap1">Selecione a Volta 1:</label>
+      <select id="lap1">
+        <option value="">--Selecione--</option>
+        <option value="1">Volta 1</option>
+        <option value="2">Volta 2</option>
+        <option value="3">Volta 3</option>
+        <option value="4">Volta 4</option>
+        <option value="5">Volta 5</option>
+        <option value="6">Volta 6</option>
+        <option value="7">Volta 7</option>
+        <option value="8">Volta 8</option>
+        <option value="9">Volta 9</option>
+        <option value="10">Volta 10</option>
+      </select>
+    </div>
+
+    <div class="selection">
+      <label for="lap2">Selecione a Volta 2:</label>
+      <select id="lap2">
+        <option value="">--Selecione--</option>
+        <option value="1">Volta 1</option>
+        <option value="2">Volta 2</option>
+        <option value="3">Volta 3</option>
+        <option value="4">Volta 4</option>
+        <option value="5">Volta 5</option>
+        <option value="6">Volta 6</option>
+        <option value="7">Volta 7</option>
+        <option value="8">Volta 8</option>
+        <option value="9">Volta 9</option>
+        <option value="10">Volta 10</option>
+      </select>
+    </div>
+
+    <!-- Seção de Seleção de Variáveis para Comparação -->
+    <div class="variable-selection">
+      <h3>Selecione as Variáveis para Comparar:</h3>
+      <form id="comparisonVariableForm">
+        <label>
+          <input type="checkbox" name="variables" value="alarme_status">
+          Alarme Status
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="avg_lap_speed">
+          Avg Lap Speed
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="beacon_code">
+          Beacon Code
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="box_voltage">
+          Box Voltage
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="correct_stance">
+          Correct Stance
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="correct_speed">
+          Correct Speed
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="cpu_usage">
+          CPU Usage (%)
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="cumulative_diff">
+          Cumulative Diff
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="cumulative_time">
+          Cumulative Time
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="stance">
+          Stance
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_air_box_temp">
+          ECU Air Box Temp (°C)
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_cooler_temp">
+          ECU Cooler Temp (°C)
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_engine_safe_hard">
+          ECU Engine Safe Hard
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_engine_safe_soft">
+          ECU Engine Safe Soft
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_fan">
+          ECU Fan
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_fuel_pressure">
+          ECU Fuel Pressure
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_fuel_pump">
+          ECU Fuel Pump
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_fuel_temp">
+          ECU Fuel Temp (°C)
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_fuel_total">
+          ECU Fuel Total (%)
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_gear">
+          ECU Gear
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_gear_voltage">
+          ECU Gear Voltage
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_kl15">
+          ECU KL15 (On/Off)
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_lambida_1">
+          ECU Lambida 1
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_lambida_2">
+          ECU Lambida 2
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_oil_lamp">
+          ECU Oil Lamp
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_oil_pressure">
+          ECU Oil Pressure
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_oil_temp">
+          ECU Oil Temp (°C)
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_push_to_pass_block">
+          ECU Push To Pass Block
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_push_to_pass_button">
+          ECU Push To Pass Button
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_push_to_pass_delay">
+          ECU Push To Pass Delay
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_push_to_pass_lamp">
+          ECU Push To Pass Lamp
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_push_to_pass_on">
+          ECU Push To Pass On
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_push_to_pass_remain">
+          ECU Push To Pass Remain
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_push_to_pass_timer">
+          ECU Push To Pass Timer
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_pit_limit_button">
+          ECU Pit Limit Button
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_pit_limit_on">
+          ECU Pit Limit On
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_powershift_on">
+          ECU Powershift On
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_powershift_sensor">
+          ECU Powershift Sensor
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_rpm_limit">
+          ECU RPM Limit
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_prm">
+          ECU PRM
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_syncro">
+          ECU Syncro
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="eco_throttle">
+          ECO Throttle
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecy_throttle_peddal">
+          ECY Throttle Pedal
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="ecu_voltage">
+          ECU Voltage
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="elipse_laptime">
+          Elipse Laptime
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="elipse_time">
+          Elipse Time
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="front_left_wheel_speed">
+          Front Left Wheel Speed
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="front_right_wheel_speed">
+          Front Right Wheel Speed
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="front_brake">
+          Front Brake
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="fuel_economy">
+          Fuel Economy
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="lap_number">
+          Lap Number
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="lap_fuel_left">
+          Lap Fuel Left
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="lateral_g">
+          Lateral G
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="logging">
+          Logging
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="longitudinal_g">
+          Longitudinal G
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="map_position_d">
+          Map Position D
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="map_position_x">
+          Map Position X
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="map_position_y">
+          Map Position Y
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="map_position_z">
+          Map Position Z
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="max_straight_speed">
+          Max Straight Speed
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="minimal_corner_speed">
+          Minimal Corner Speed
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="network_time">
+          Network Time
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="oil_temp">
+          Oil Temp (°C)
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="rear_brake">
+          Rear Brake
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="running_lap_time">
+          Running Lap Time
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="section_diff">
+          Section Diff
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="section_time">
+          Section Time
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="speed">
+          Speed (km/h)
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="steering">
+          Steering (graus)
+        </label>
+        <label>
+          <input type="checkbox" name="variables" value="tank_fuel">
+          Tank Fuel (%)
+        </label>
+      </form>
+      <button id="updateButton" class="button">Atualizar Gráficos</button>
+    </div>
+
+    <!-- Contêiner principal que usa CSS Grid para organizar os gráficos -->
+    <div class="grid-container page1" id="chartsContainer">
+      <!-- Gráficos serão inseridos dinamicamente aqui -->
+    </div>
+
+    <!-- Inclusão da biblioteca Chart.js localmente -->
+    <script src="chart.js"></script>
+    
+    <!-- Inclusão do script JavaScript personalizado para gerenciar os gráficos -->
+    <script src="script.js"></script>
+</body>
+</html>

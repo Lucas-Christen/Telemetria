@@ -1,0 +1,23 @@
+{
+  "name": "simulador-telemetria",
+  "version": "1.0.0",
+  "description": "Simulação de comunicação LoRa para telemetria em automobilismo híbrido",
+  "main": "transmitter.js",
+  "scripts": {
+    "start-transmitter": "node transmitter.js",
+    "start-receiver": "node receiver.js",
+    "start-server": "node server.js",
+    "start-dashboard": "node server.js"
+  },
+  "dependencies": {
+    "chart.js": "^4.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1",
+    "sqlite3": "^5.1.7",
+    "winston": "^3.9.0"
+  },
+  "author": "Lucas Fernandes Christen",
+  "license": "ISC"
+}

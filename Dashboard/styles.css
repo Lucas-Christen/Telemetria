@@ -1,0 +1,146 @@
+/* dashboard/styles.css */
+
+/* Estilização geral do corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  text-align: center; /* Centraliza o texto */
+  background-color: #2c2c2c; /* Fundo cinza escuro */
+  color: #ffffff; /* Cor do texto branca para melhor contraste */
+  margin: 0; /* Remove margens padrão */
+  padding: 20px; /* Padding interno de 20px */
+}
+
+/* Estilização do cabeçalho principal */
+h1 {
+  color: #ffffff; /* Cor do texto branca */
+  margin-bottom: 20px; /* Margem inferior de 20px */
+}
+
+/* Estilização da navegação */
+nav {
+  margin-bottom: 20px; /* Margem inferior de 20px */
+}
+
+nav a {
+  text-decoration: none; /* Remove sublinhado dos links */
+  color: #ffffff; /* Texto branco */
+  background-color: #555555; /* Fundo cinza médio para os botões */
+  padding: 10px 20px; /* Padding interno dos botões */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Transição suave para hover */
+  font-weight: bold; /* Fonte em negrito */
+}
+
+nav a:hover {
+  background-color: #777777; /* Fundo cinza claro ao passar o mouse */
+}
+
+/* Seção de Seleção de Variáveis */
+.variable-selection {
+  background: #444444; /* Fundo cinza médio */
+  padding: 20px; /* Padding interno */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+  margin-bottom: 30px; /* Margem inferior */
+  max-width: 1200px; /* Largura máxima */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.variable-selection h2,
+.variable-selection h3 {
+  color: #ffffff; /* Cor do texto branca */
+  margin-bottom: 15px; /* Margem inferior */
+}
+
+.variable-selection form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.variable-selection label {
+  margin: 5px 10px;
+  font-size: 14px;
+  width: 200px; /* Define uma largura fixa para manter o alinhamento */
+}
+
+.variable-selection input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Botão de Atualização */
+.button {
+  background-color: #555555; /* Fundo cinza médio */
+  color: #ffffff; /* Texto branco */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background-color: #777777; /* Fundo cinza claro ao passar o mouse */
+}
+
+/* Contêiner da grade que organiza os gráficos */
+.grid-container {
+  display: grid; /* Define como grid container */
+  grid-gap: 20px; /* Espaçamento de 20px entre os grids */
+  max-width: 1200px; /* Largura máxima da grade */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Layout para a primeira página (auto-fit, minmax para responsividade) */
+.grid-container.page1 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta automaticamente */
+}
+
+/* Layout para a segunda página (Comparação) */
+.comparison-charts {
+  display: grid; /* Define como grid container */
+  grid-gap: 20px; /* Espaçamento de 20px entre os grids */
+  max-width: 1800px; /* Largura máxima dos gráficos */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta automaticamente */
+}
+
+.comparison-charts .chart-container {
+  background: #444444; /* Fundo cinza médio para os contêineres dos gráficos */
+  padding: 15px; /* Padding interno de 15px */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
+}
+
+.chart-container {
+  background: #444444; /* Fundo cinza médio para os contêineres dos gráficos */
+  padding: 15px; /* Padding interno de 15px */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
+}
+
+.chart-container canvas {
+  width: 100% !important; /* Ocupa 100% da largura do contêiner */
+  height: 300px !important; /* Altura fixa de 300px */
+}
+
+/* Responsividade Avançada: Ajustes para telas menores */
+@media (max-width: 768px) {
+  /* Ajusta a grade da primeira página para uma coluna */
+  .grid-container.page1 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ajusta a grade de comparação para uma coluna */
+  .comparison-charts {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reduz a altura dos gráficos para telas menores */
+  .chart-container canvas {
+    height: 200px !important;
+  }
+}
